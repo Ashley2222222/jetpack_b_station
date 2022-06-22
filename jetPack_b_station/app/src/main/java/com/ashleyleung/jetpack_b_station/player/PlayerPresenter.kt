@@ -30,7 +30,7 @@ import timber.log.Timber
  *
  * @class describe
  * @date 2022-06-21
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 //class PlayerPresenter {
 class PlayerPresenter private constructor() {
@@ -79,7 +79,7 @@ class PlayerPresenter private constructor() {
      * @describe 根据状态控制音乐播放还是暂停  上一首  下一首
      * @author liangxy
      * @time 2022/6/21 15:51
-     * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+     *
      */
     var x: Int = 0
 

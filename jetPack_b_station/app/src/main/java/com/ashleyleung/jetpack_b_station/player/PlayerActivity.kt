@@ -11,7 +11,7 @@ import timber.log.Timber
  * @name
  * @class describe
  * @date 2022-06-21
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 //class PlayerActivity : AppCompatActivity(), IPlayerCallback { // 数据驱动不需要callback
 class PlayerActivity : AppCompatActivity() {
@@ -41,7 +41,7 @@ class PlayerActivity : AppCompatActivity() {
      * @describe 对数据进行监听
      * @author liangxy
      * @time 2022/6/22 9:48
-     * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+     *
      */
     private fun initDataListener() {
         playerPresenter.currentMusic.addListener {

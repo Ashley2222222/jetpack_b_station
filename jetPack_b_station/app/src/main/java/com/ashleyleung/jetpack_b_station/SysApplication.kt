@@ -7,7 +7,7 @@ import android.os.Handler
  * @name
  * @class describe
  * @date 2022-05-27
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 class SysApplication : BaseApplication(){
 

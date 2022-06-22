@@ -11,7 +11,7 @@ import timber.log.Timber
  * @name
  * @class describe
  * @date 2022-06-15
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 abstract class BaseApplication : Application() {
     private class CrashReportTree : Timber.Tree() {

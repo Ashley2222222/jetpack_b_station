@@ -7,7 +7,7 @@ import java.util.*
  * @name
  * @class describe
  * @date 2022-06-20
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 class UserModel {
     private val api by lazy {
@@ -20,7 +20,7 @@ class UserModel {
      * @describe
      * @author liangxy
      * @time 2022/6/20 15:41
-     * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+     *
      */
     fun doLogin(callback: onLoginStateChange, account: String, pwd: String) {
         callback.onLoading()

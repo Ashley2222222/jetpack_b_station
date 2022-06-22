@@ -11,7 +11,7 @@ import timber.log.Timber
  * @class describe 数据容器
  *  可以监听数据的变化
  * @date 2022-06-22
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 class DataListenContainer<T> {
     private val blocks = arrayListOf<(T?) -> Unit>()

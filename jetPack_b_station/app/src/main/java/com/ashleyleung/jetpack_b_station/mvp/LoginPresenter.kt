@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  * @name
  * @class describe
  * @date 2022-06-21
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 class LoginPresenter {
     private val userModel by lazy { UserModelMvp() }

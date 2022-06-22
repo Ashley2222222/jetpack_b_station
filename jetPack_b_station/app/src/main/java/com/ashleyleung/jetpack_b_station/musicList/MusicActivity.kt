@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_player.*
  * @name
  * @class describe
  * @date 2022-06-22
- * Copyright (c)  Guangzhou GCI Science & Technology Co., Ltd.All rights reserved
+ *
  */
 class MusicActivity : AppCompatActivity() {
 
