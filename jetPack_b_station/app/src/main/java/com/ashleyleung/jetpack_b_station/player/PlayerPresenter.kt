@@ -84,65 +84,70 @@ class PlayerPresenter {
     var x: Int = 0
 
     fun doPlayOrPause() {
-        if (currMusic == null) {
+        //   数据驱动不需要了
+        /*       if (currMusic == null) {
+              //获取一首歌曲
+              currMusic = playerModel.getMusicById("xxx")
+          }
+
+          player.play(currMusic)
+
+
+
+          dispatchTitleChange("当前播放的歌曲标题...${currMusic?.name}")
+               dispatchCoverChange("当前播放的歌曲封面....${currMusic?.cover}")
+
+
+
+
+               if (currentPlayState == PlayState.PLAYING) {
+                   //暂停
+                   dispatchPauseState()
+               } else {
+                   //开始播放音乐
+                   dispatchPlayingState()
+               }
+       */
+        if (currentMusic.value == null) {
             //获取一首歌曲
-            currMusic = playerModel.getMusicById("xxx")
+            currentMusic.value= playerModel.getMusicById("xxx")
         }
 
         player.play(currMusic)
 
 
-        //   数据驱动不需要了
-        /*     dispatchTitleChange("当前播放的歌曲标题...${currMusic?.name}")
-             dispatchCoverChange("当前播放的歌曲封面....${currMusic?.cover}")
-
-
-
-
-             if (currentPlayState == PlayState.PLAYING) {
-                 //暂停
-                 dispatchPauseState()
-             } else {
-                 //开始播放音乐
-                 dispatchPlayingState()
-             }
-     */
-
-        if (currentPlayState.value != PlayState.PLAYING) {
-
-
-            if (currentMusic.value == null) {
-                //获取一首歌曲
-                currentMusic.value = playerModel.getMusicById("kkkk")//lesson10
-            }
-            player.play(currentMusic.value)
-
+        if (currentPlayState == null) {
             currentPlayState.value = PlayState.PLAYING
-        }else{
-            currentPlayState.value = PlayState.PAUSED
-        }
+        } else {
+            Timber.e("当前状态 : %s",currentPlayState.value.toString())
+            if (currentPlayState.value != PlayState.PLAYING) {
 
+                currentPlayState.value = PlayState.PLAYING
+            } else {
+                currentPlayState.value = PlayState.PAUSED
+            }
+        }
 
     }
 
 
     ////数据驱动不需要了
- /*   fun dispatchPauseState() {
-        callbacksList.forEach {
-            it.onPlayerPause()
-            currentPlayState = PlayState.PAUSED
+    /*   fun dispatchPauseState() {
+           callbacksList.forEach {
+               it.onPlayerPause()
+               currentPlayState = PlayState.PAUSED
 
-        }
-    }
+           }
+       }
 
-    fun dispatchPlayingState() {
+       fun dispatchPlayingState() {
 
-        callbacksList.forEach {
-            it.onPlaying()
-            currentPlayState = PlayState.PLAYING
+           callbacksList.forEach {
+               it.onPlaying()
+               currentPlayState = PlayState.PLAYING
 
-        }
-    }*/
+           }
+       }*/
 
 
     fun playNext() {
@@ -151,11 +156,11 @@ class PlayerPresenter {
         currentMusic.value = playerModel.getMusicById("下一首：火鸟")
 
 //  数据驱动不需要了
-  /*      dispatchTitleChange("切换到下一首，标题变了")
-        dispatchCoverChange("切换到下一首，封面变了")
-        //2、设置给播放器
-        // 3、等待播放的回调通知
-        currentPlayState = PlayState.PLAYING*/
+        /*      dispatchTitleChange("切换到下一首，标题变了")
+              dispatchCoverChange("切换到下一首，封面变了")
+              //2、设置给播放器
+              // 3、等待播放的回调通知
+              currentPlayState = PlayState.PLAYING*/
         currentPlayState.value = PlayState.PLAYING
 
     }

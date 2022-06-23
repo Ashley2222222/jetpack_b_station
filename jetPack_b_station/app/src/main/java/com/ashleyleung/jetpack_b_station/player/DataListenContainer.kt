@@ -42,7 +42,8 @@ class DataListenContainer<T> {
     fun addListener(block: (T?) -> Unit) {
         if (!blocks.contains(block)) {
             blocks.add(block)
-            Timber.e("add")
+            var str = "add $block"
+            Timber.e(str)
         }
         var str = "数量：" + blocks.size
         Timber.e(str)

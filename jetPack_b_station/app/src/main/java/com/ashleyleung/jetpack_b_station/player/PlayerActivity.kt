@@ -62,6 +62,7 @@ class PlayerActivity : AppCompatActivity() {
 //                    btn_play_or_pause.text = "暂停"
                     btn_play_or_pause.text = "正在播放点击暂停"
                     Timber.e(btn_play_or_pause.text.toString())
+                    Timber.e(playerPresenter.currentPlayState.value.toString())
                 }
 
             }
