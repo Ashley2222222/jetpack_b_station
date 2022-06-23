@@ -33,6 +33,7 @@ class PlayerActivity : AppCompatActivity() {
         initListener()
         //      数据驱动不需要这些
 //        playerPresenter.registerCallback(this)
+
         initDataListener()
     }
 
@@ -91,26 +92,28 @@ class PlayerActivity : AppCompatActivity() {
 //        playerPresenter.unregisterCallback(this)
     }
 
-//    override fun onTitleChange(title: String) {
-//          tvTitle?.text = title
-//      }
-//
-//      override fun pnProgressChange(current: Int) {
-//          TODO("Not yet implemented")
-//      }
-//
-//      override fun onPlaying() {
-//          //播放中--->显示暂停
-//          btn_play_or_pause.text = "暂停"
-//          tvTitle?.text = "暂停"
-//      }
-//
-//      override fun onPlayerPause() {
-//          //暂停-->显示播放
-//          btn_play_or_pause.text = "播放"
-//      }
-//
-//      override fun onCoverChange(cover: String) {
-//          println("cover change")
-//      }
+    /*
+    数据驱动不需要了
+     override fun onTitleChange(title: String) {
+            tvTitle?.text = title
+        }
+
+        override fun pnProgressChange(current: Int) {
+            TODO("Not yet implemented")
+        }
+
+        override fun onPlaying() {
+            //播放中--->显示暂停
+            btn_play_or_pause.text = "暂停"
+  //          tvTitle?.text = "暂停"
+        }
+
+        override fun onPlayerPause() {
+            //暂停-->显示播放
+            btn_play_or_pause.text = "播放"
+        }
+
+        override fun onCoverChange(cover: String) {
+            println("cover change")
+        }*/
 }

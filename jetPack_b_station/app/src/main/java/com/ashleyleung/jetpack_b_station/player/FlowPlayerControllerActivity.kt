@@ -28,14 +28,14 @@ class FlowPlayerControllerActivity : AppCompatActivity() {
     }
 
     private fun initDataListener() {
-        playerPresenter.currentPlayState.addListener {
+      /*  playerPresenter.currentPlayState.addListener {
             btnPlayOrPause.text =
                 if (it === PlayerPresenter.PlayState.PLAYING) {
                 "暂停"
             } else {
                 "播放"
             }
-        }
+        }*/
     }
 
     private fun initListener() {
